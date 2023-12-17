@@ -17,9 +17,9 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 // cors for cross origin resource sharing
 app.use(cors());
 
-// mongoose connection
-// YlBd2JmMCIJIIQGY
-// mongodb+srv://sm829564:YlBd2JmMCIJIIQGY@memories-blog.a5kbzr3.mongodb.net/memories-blog
+// // mongoose connection
+// // YlBd2JmMCIJIIQGY
+// // mongodb+srv://sm829564:YlBd2JmMCIJIIQGY@memories-blog.a5kbzr3.mongodb.net/memories-blog
 const CONNECTION_URL =
   "mongodb+srv://sm829564:YlBd2JmMCIJIIQGY@memories-blog.a5kbzr3.mongodb.net/memories-blog";
 mongoose
@@ -34,4 +34,6 @@ mongoose
 const PORT = process.env.PORT || 5000;
 
 // listen to server
-app.listen(PORT, () => console.log(`Server running on port: ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`Server running on port: ${PORT}`);
+});
