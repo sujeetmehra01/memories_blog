@@ -2,9 +2,13 @@ import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
+import postsRouter from "./routes/posts.router.js";
 
 // initialize server instance
 const app = express();
+
+// routes
+app.use("/api/v1/posts", postsRouter);
 
 // middleware
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
